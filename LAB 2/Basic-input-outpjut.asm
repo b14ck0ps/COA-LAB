@@ -6,13 +6,25 @@ org 100h
 
 .MODEL SMALL
 .STACK 100H
-.DATA   ;STORE VARIABLES
+
+.DATA   ;STORE VARIABLES  
+
+;DB means databyte and 
+
+;name   type   ?
+  A      DB    ?
+
 
 
 .CODE ; CODE SECTION
+
 MAIN PROC  
     
-    MOV AL, 'A'                
+    MOV AL, 'A'  ; save char
+    
+    ; getting data from DATA section
+    MOV AX, @DATA
+    MOV DS, AX              
     
     
     ;this is the input section
@@ -23,7 +35,7 @@ MAIN PROC
     
     ;this is for new print line
     MOV AH,2
-    MOV DL, 0AH
+    MOV DL, 0AH ; this is the new line HEX.. check ascii code...
     INT 21H
     MOV DL,0DH ; carries return for new line otw some there are some space before new line
     INT 21H
