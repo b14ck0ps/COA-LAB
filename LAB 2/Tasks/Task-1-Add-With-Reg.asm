@@ -16,7 +16,7 @@ org 100h
 
 MAIN PROC  
                  
-    ; Add 5 + 10             
+    ; Add 3+ 5             
     MOV AL, 3
     MOV BL, 5
     ADD BL , AL 
