@@ -12,9 +12,6 @@ C DW 'R'
 D DW 'A'
 E DW 'N'
 
-
-
-
 .CODE ; CODE SECTION
 
 MAIN PROC     
